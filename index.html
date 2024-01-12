@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estil.css">
+    <title>testando os conhecimentos</title>
+</head>
+
+
+<body>
+ 
+    <div id="start" class="container ">
+        <h1>JOGO DE ADIVINHAR</h1>
+        <button type="button" class="botoes"  id="botaoplaygame" onclick="avancar(1)">PLAY GAME</button>
+    </div>
+
+
+    
+        <div id="one" class="container esconde">
+            <h1>instruções</h1>
+            <ol>
+                <li>Você pode formar um nome de usuário com letras e números.</li>
+                <li>só podem ser chutado números</li>
+                <li>você terá apenas 7 tentativas</li>
+                 <li>números menores que 1 e maiores que 100 não são válidos!</li>
+                <li>recarregando a página seu progresso será perdido</li>
+                <li>não repita números já chutados</li>
+            </ol>
+    
+    
+            <h3>boa sorte!!</h3>
+
+            <button id="botaoinstrucao" class="botoes"  onclick="avancar(2)">PRÓXIMO</button>
+        </div>
+
+
+
+    <div id="two" class="container esconde">
+        <h1>DIGITE O NOME DO(A) JOGADOR(A)</h1>
+        <input type="text" id="inputnomedouser" placeholder="Insira Aqui...">
+        <button id="botaodadosdouser" class="botoes"  onclick="boas_vindas()">CONFIRMAR</button>  
+        <div class="div_btn"> 
+            <button id="disabledprox" class="botoes" onclick="avancar(3)" disabled>PRÓXIMO</button>
+            <button class="botoes" onclick="voltar(1)">VOLTAR</button>
+        </div>
+        <P id="msgheader"></P>
+    </div>
+
+
+    <div id="tree" class="container esconde">
+        <h1>Digite um número que seja de 1 a 100</h1>
+        <input type="number" id="chuteinput" placeholder="Insira Aqui...">
+        <button id="chutebotao" class="botoes" onclick="jogo()">CHUTAR</button>
+        <di id="msgtentativas"></di>
+        <div id="numtentados"></div>
+        <div id="msgjogo"></div>
+        <button class="botoes" onclick="avancar(4)">FIM DE JOGO!</button>
+    </div>
+
+
+    <div id="four" class="container esconde">
+        <h1>o jogo chegou ao fim...</h1>
+        <h2>Deseja jogar novamente??</h2>
+        <div>
+            <button id="sim" class="botoes" onclick="jogar_novamente()">SIM</button>
+            <button id="nao" class="botoes" onclick="naojogar_novamente()">NÃO</button>
+
+            <!-- li -- label -- css -->
+        </div>
+    </div>
+
+  <script src="refazer.js"></script>
+</body>
+
+
+
+</html>
+
